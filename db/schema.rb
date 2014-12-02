@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20141128192832) do
 
   create_table "articles", force: true do |t|
-    t.integer  "article_id"
+    t.integer  "article_id" #Rails will automatically create and _id column for any model so you do not need to define the primary key
     t.integer  "user_id"
     t.string   "title"
     t.text     "body"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20141128192832) do
   end
 
   create_table "users", force: true do |t|
-    t.integer  "user_id"
+    t.integer  "user_id" #Rails will automatically create and _id column for any model so you do not need to define the primary key
     t.string   "email"
     t.string   "password"
     t.datetime "created_at"
